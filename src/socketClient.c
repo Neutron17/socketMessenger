@@ -60,6 +60,7 @@ void parseArgs(int argc, char *argv[]) {
         switch(option) {
             case 'i': {
                 ip = optarg;
+                break;
             }
             case 'd':
             case 'v': {
