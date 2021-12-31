@@ -8,6 +8,7 @@
 #include <stdbool.h>
 #include <ctype.h>
 #include <assert.h>
+#include <getopt.h>
 
 void parseArgs(int argc, char *argv[]);
 
@@ -56,6 +57,7 @@ int main(int argc, char *argv[]) {
         send(clientFD, text, strlen(text), 0);
         close(clientFD);
     }
+    if(isDebug) printf("debug: Finished, cleaning up resources\n");
     free(buff);
     close(sockFD);
     return EXIT_SUCCESS;
